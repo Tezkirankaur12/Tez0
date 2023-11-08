@@ -1,0 +1,64 @@
+internsctl - Custom Command Line Utility
+
+DESCRIPTION:
+  internsctl is a custom command line utility that provides various functionalities for managing CPU, memory, users, and files on a Linux system.
+
+COMMANDS:
+  cpu getinfo
+    Display information about the CPU.
+
+  memory getinfo
+    Display information about the system memory.
+
+  user create <username>
+    Create a new user with the specified username. The user will have login access to the Linux system and a home directory.
+
+  user list [--sudo-only]
+    List all regular users on the system. Optionally, use --sudo-only to list users with sudo permissions.
+
+  file getinfo <file-name> [options]
+    Display information about a file. Options include:
+      --size, -s              Print the size of the specified file.
+      --permissions, -p       Print the permissions of the specified file.
+      --owner, -o             Print the owner of the specified file.
+      --last-modified, -m     Print the last modified time of the specified file.
+
+USAGE EXAMPLES:
+  Display CPU information:
+    $ internsctl cpu getinfo
+
+  Display memory information:
+    $ internsctl memory getinfo
+
+  Create a new user:
+    $ internsctl user create <username>
+
+  List all users:
+    $ internsctl user list
+
+  List users with sudo permissions:
+    $ internsctl user list --sudo-only
+
+  Display file information:
+    $ internsctl file getinfo <file-name>
+
+  Display only the size of a file:
+    $ internsctl file getinfo --size <file-name>
+
+  Display only the permissions of a file:
+    $ internsctl file getinfo --permissions <file-name>
+
+  Display only the owner of a file:
+    $ internsctl file getinfo --owner <file-name>
+
+  Display only the last modified time of a file:
+    $ internsctl file getinfo --last-modified <file-name>
+
+OPTIONS:
+  -h, --help
+    Display this help message.
+
+AUTHOR:
+  Your Name
+  Contact: your.email@example.com
+
